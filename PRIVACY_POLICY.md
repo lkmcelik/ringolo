@@ -1,10 +1,12 @@
-# Privacy Policy for Calorify
+# Privacy Policy for Ringolo
 
-Last Updated: October 17, 2026
+Last Updated: November 13, 2026
+
+Ringolo was called Calorify until December 2026. The new name doesn't change how we handle your data.
 
 ## Introduction
 
-Calorify ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this privacy policy carefully.
+Ringolo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this privacy policy carefully.
 
 ## Information We Collect
 
@@ -15,11 +17,13 @@ Calorify ("we," "our," or "us") is committed to protecting your privacy. This Pr
 - **Email address**: Used for account creation and authentication
 - **Name**: Used for personalization and display purposes
 - **Profile information**: Date of birth, sex (optional), height, weight and activity level for personalized calorie calculations
+- **Guest use without an account**: If you start using the App without an account, it creates an anonymous guest account that has no email address or name. What you log is stored with it in the same way as with a regular account. You can add a sign-in method later and keep your data, or delete the guest data in Profile.
 
 #### Health and Fitness Data
 
 - **Nutrition data**: Food logs, calorie intake, macronutrient information
 - **Health metrics**: Weight changes, BMI calculations (with your explicit consent via HealthKit)
+- **Weight entries**: Weights you log with their date, and your goal weight with its start weight and date if you set one. With your permission, weights are also read from and saved to Apple Health.
 - **Fitness data**: Activity levels, calorie burn estimates (with your explicit consent via HealthKit)
 
 #### User-Generated Content
@@ -82,7 +86,7 @@ Calorify ("we," "our," or "us") is committed to protecting your privacy. This Pr
 
 ### Advertising Attribution:
 
-With your consent (via App Tracking Transparency), we share limited device identifiers and app events (such as app installs and launches, onboarding steps, in-app purchases and free-trial starts) with Meta for advertising measurement purposes. Purchase and free-trial events are logged automatically by the Meta SDK. We never share your food logs, health data, or nutrition information with advertisers. See the [Third-Party Services](#third-party) section for full details. If you installed Calorify from an Apple Ads ad, we also receive campaign-level attribution for that install from Apple, without any advertising identifier; see [Apple Ads Attribution](#apple-ads-attribution).
+With your consent (via App Tracking Transparency), we share limited device identifiers and app events (such as app installs and launches, onboarding steps, in-app purchases and free-trial starts) with Meta for advertising measurement purposes. Purchase and free-trial events are logged automatically by the Meta SDK. We never share your food logs, health data, or nutrition information with advertisers. See the [Third-Party Services](#third-party) section for full details. If you installed Ringolo from an Apple Ads ad, we also receive campaign-level attribution for that install from Apple, without any advertising identifier; see [Apple Ads Attribution](#apple-ads-attribution).
 
 ### We MAY Share Data:
 
@@ -187,7 +191,7 @@ You can control tracking permissions through:
 
 ## Children's Privacy
 
-Calorify is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe we have collected data from a child, please contact us immediately.
+Ringolo is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe we have collected data from a child, please contact us immediately.
 
 ## International Data Transfers
 
@@ -240,7 +244,7 @@ We process your data based on:
 
 ## Privacy by Design
 
-Calorify implements privacy by design principles:
+Ringolo implements privacy by design principles:
 
 - **Data Minimization**: Collect only necessary data
 - **Purpose Limitation**: Use data only for stated purposes

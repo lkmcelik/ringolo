@@ -1,14 +1,16 @@
-# Terms of Service for Calorify
+# Terms of Service for Ringolo
 
-Last Updated: October 16, 2026
+Last Updated: November 13, 2026
+
+Ringolo was called Calorify until December 2026. Only the name has changed: these Terms apply to the App under either name.
 
 ## 1. Agreement to Terms
 
-By downloading, installing, or using Calorify ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you do not have permission to access the App.
+By downloading, installing, or using Ringolo ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you do not have permission to access the App.
 
 ## 2. Description of Service
 
-Calorify is a nutrition tracking and health management application that provides:
+Ringolo is a nutrition tracking and health management application that provides:
 - Calorie and macronutrient tracking
 - AI-powered food recognition
 - Personalized calorie and macronutrient goals
@@ -18,7 +20,7 @@ Calorify is a nutrition tracking and health management application that provides
 ## 3. Account Registration
 
 ### Requirements
-- You must be at least 13 years old to use Calorify
+- You must be at least 13 years old to use Ringolo
 - You must provide accurate and complete information
 - You are responsible for maintaining account security
 - One person per account (no account sharing)
@@ -47,7 +49,7 @@ Calorify is a nutrition tracking and health management application that provides
 
 ## 5. Health and Medical Disclaimer
 
-**IMPORTANT**: Calorify is NOT a medical device or medical advice service.
+**IMPORTANT**: Ringolo is NOT a medical device or medical advice service.
 
 - **Not Medical Advice**: Information provided is for general informational purposes only
 - **Consult Professionals**: Always consult qualified healthcare providers for medical advice
@@ -79,7 +81,7 @@ Calorify is a nutrition tracking and health management application that provides
 - Cancel anytime through iOS Settings
 - No refunds for partial subscription periods
 - Access continues until end of current billing period
-- Deleting your Calorify account does not cancel an App Store subscription; cancel it under Subscriptions in your Apple Account settings
+- Deleting your Ringolo account does not cancel an App Store subscription; cancel it under Subscriptions in your Apple Account settings
 
 ### Free Trial
 - Where offered, eligible new subscribers get a free trial: 3 days on the monthly plan, 7 days on the annual plan
@@ -90,9 +92,9 @@ Calorify is a nutrition tracking and health management application that provides
 ## 7. Intellectual Property
 
 ### Our Property
-- All App content, features, and functionality are owned by Calorify
+- All App content, features, and functionality are owned by Ringolo
 - Protected by copyright, trademark, and other laws
-- Calorify name, logo, and related marks are our trademarks
+- The Ringolo name, logo, and related marks, including the former name Calorify, are our trademarks
 
 ### Your Content
 - You retain rights to content you create (food logs, photos, etc.)
@@ -106,7 +108,7 @@ Calorify is a nutrition tracking and health management application that provides
 
 ## 8. Privacy and Data Protection
 
-Your use of Calorify is also governed by our Privacy Policy. Key points:
+Your use of Ringolo is also governed by our Privacy Policy. Key points:
 - We collect only necessary data
 - We don't sell your personal information
 - You control your data and can delete it anytime
@@ -138,7 +140,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY LAW:
 - Some jurisdictions don't allow limitations, so these may not apply to you
 
 ### Indemnification
-You agree to defend, indemnify, and hold harmless Calorify from claims arising from:
+You agree to defend, indemnify, and hold harmless Ringolo from claims arising from:
 - Your use of the App
 - Your violation of these Terms
 - Your violation of any rights of another
@@ -192,7 +194,7 @@ These Terms are governed by applicable laws, without regard to conflict of law p
 ## 14. General Provisions
 
 ### Entire Agreement
-These Terms and Privacy Policy constitute the entire agreement between you and Calorify.
+These Terms and Privacy Policy constitute the entire agreement between you and Ringolo.
 
 ### Severability
 If any provision is found unenforceable, the remaining provisions continue in effect.
@@ -268,7 +270,7 @@ Some features may be in beta. Beta features are provided as-is without warrantie
 
 ## 21. Accessibility
 
-We strive to make Calorify accessible to all users, including those with disabilities, in accordance with applicable accessibility guidelines.
+We strive to make Ringolo accessible to all users, including those with disabilities, in accordance with applicable accessibility guidelines.
 
 ## 22. Force Majeure
 
@@ -276,4 +278,4 @@ We're not liable for failures due to circumstances beyond our reasonable control
 
 ---
 
-By using Calorify, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+By using Ringolo, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.

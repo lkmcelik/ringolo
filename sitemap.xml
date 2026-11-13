@@ -1,26 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lkmcelik.github.io/calorify/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lkmcelik.github.io/calorify/count-calories-from-a-photo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lkmcelik.github.io/calorify/count-calories-from-a-photo/"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lkmcelik.github.io/calorify/ringolo-vs-typical-calorie-counters/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lkmcelik.github.io/calorify/ringolo-vs-typical-calorie-counters/"/>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lkmcelik.github.io/calorify/support/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://lkmcelik.github.io/calorify/privacy.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lkmcelik.github.io/calorify/terms.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

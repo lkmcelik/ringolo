@@ -1,23 +1,34 @@
-/* Calorify site: one dark theme built on the app's brand tokens.
-   Ring gradient #00CCB3 -> #66E666 (BrandColorTokens.calorieRing), macro colors from the app's dark theme. */
+/* Ringolo site (formerly Calorify): a light theme built on the app's brand tokens, with the dark theme for
+   visitors who prefer dark. Brand ring: gradient #00CCB3 -> #66E666 (BrandColorTokens.calorieRing) plus the
+   blue "this meal" segment (#338CFF light, #66B3F2 dark). Text accents use primaryStrong #1968A9 on light. */
 
 :root {
-    --night: #070B12;
-    --deck: #0C121B;
-    --raise: #111925;
-    --rim: #1B2430;
-    --rim-hi: #2A3646;
-    --frost: #EDF1F5;
-    --text: #C9D1DA;
-    --haze: #9AA6B4;
+    --night: #F4F5F7;
+    --deck: #FFFFFF;
+    --raise: #EBEEF1;
+    --rim: #E1E4E9;
+    --rim-hi: #CDD2D9;
+    --frost: #16161D;
+    --text: #3C3C46;
+    --haze: #5F5F6B;
     --teal: #00CCB3;
     --green: #66E666;
-    --protein: #F26680;
-    --carbs: #66B3F2;
+    --accent: #1968A9;
+    --accent-hover: #124E80;
+    --brand-blue: #338CFF;
+    --ring-track: #EBEEF1;
     --fat: #FAB34D;
+    --pill-ink: #8A5100;
+    --pill-bg: rgba(250, 179, 77, 0.16);
+    --pill-rim: rgba(176, 110, 0, 0.4);
+    --nav-bg: rgba(244, 245, 247, 0.86);
+    --glow: rgba(0, 204, 179, 0.16);
+    --shadow-phone: 0 0 0 1px rgba(22, 22, 29, 0.12), 0 34px 70px -30px rgba(22, 22, 29, 0.45), 0 80px 120px -70px rgba(22, 22, 29, 0.3);
+    --shadow-card: 0 0 0 1px rgba(22, 22, 29, 0.1), 0 30px 60px -26px rgba(22, 22, 29, 0.4);
     --app-bg: #141417;
     --ring: linear-gradient(135deg, var(--teal), var(--green));
 
+    --font-brand: "Nunito", ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", system-ui, sans-serif;
     --font-display: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -25,7 +36,33 @@
     --gutter: clamp(16px, 4vw, 40px);
     --nav-h: 64px;
 
-    color-scheme: dark;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --night: #070B12;
+        --deck: #0C121B;
+        --raise: #111925;
+        --rim: #1B2430;
+        --rim-hi: #2A3646;
+        --frost: #EDF1F5;
+        --text: #C9D1DA;
+        --haze: #9AA6B4;
+        --accent: #00CCB3;
+        --accent-hover: #66E666;
+        --brand-blue: #66B3F2;
+        --ring-track: rgba(255, 255, 255, 0.16);
+        --pill-ink: #FAB34D;
+        --pill-bg: rgba(250, 179, 77, 0.1);
+        --pill-rim: rgba(250, 179, 77, 0.45);
+        --nav-bg: rgba(7, 11, 18, 0.82);
+        --glow: rgba(0, 204, 179, 0.22);
+        --shadow-phone: 0 0 0 1px #2E3947, 0 34px 70px -24px rgba(0, 0, 0, 0.85), 0 80px 120px -60px rgba(0, 0, 0, 0.7);
+        --shadow-card: 0 0 0 1px var(--rim-hi), 0 30px 60px -20px rgba(0, 0, 0, 0.8);
+
+        color-scheme: dark;
+    }
 }
 
 *,
@@ -82,16 +119,16 @@ figure {
 }
 
 a {
-    color: var(--teal);
+    color: var(--accent);
     text-underline-offset: 0.18em;
 }
 
 a:hover {
-    color: var(--green);
+    color: var(--accent-hover);
 }
 
 :focus-visible {
-    outline: 3px solid var(--teal);
+    outline: 3px solid var(--accent);
     outline-offset: 3px;
     border-radius: 6px;
 }
@@ -159,13 +196,88 @@ a:hover {
     flex: none;
 }
 
+/* Brand: ring mark and "Ringolo" wordmark (brand notes §2). Lockups never mirror in RTL. */
+
+.mark {
+    flex: none;
+    overflow: visible;
+}
+
+.mark-track,
+.mark-arc,
+.mark-seg {
+    fill: none;
+    stroke-width: 132;
+}
+
+.mark-track {
+    stroke: var(--ring-track);
+}
+
+.mark-arc,
+.mark-seg {
+    stroke-linecap: round;
+}
+
+.mark-seg {
+    stroke: var(--brand-blue);
+}
+
+.wordmark {
+    font-family: var(--font-brand);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    color: var(--frost);
+    white-space: nowrap;
+}
+
+/* The i's tittle in the brand blue: the glyph is painted with a hard-stop gradient (blue above the x-height). */
+.wm-i {
+    color: transparent;
+    background: linear-gradient(to bottom, var(--brand-blue) 36%, var(--frost) 36%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Compact lockup: mark D = 1.5 x cap height (cap = 0.705 em in Nunito), gap 0.35 D. */
+.lockup {
+    --d: 28px;
+    direction: ltr;
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--d) * 0.35);
+    min-height: 44px;
+    text-decoration: none;
+}
+
+.lockup .mark {
+    width: var(--d);
+    height: var(--d);
+}
+
+.lockup .wordmark {
+    font-size: calc(var(--d) / 1.5 / 0.705);
+}
+
+/* Full (stacked) lockup: wordmark cap height 0.30 D, 0.18 D below the mark. */
+.lockup--stacked {
+    --d: 48px;
+    flex-direction: column;
+    gap: calc(var(--d) * 0.18 - var(--d) * 0.3 / 0.705 * 0.124);
+}
+
+.lockup--stacked .wordmark {
+    font-size: calc(var(--d) * 0.3 / 0.705);
+}
+
 /* Navigation */
 
 .site-nav {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(7, 11, 18, 0.82);
+    background: var(--nav-bg);
     -webkit-backdrop-filter: saturate(140%) blur(16px);
     backdrop-filter: saturate(140%) blur(16px);
     border-bottom: 1px solid var(--rim);
@@ -179,27 +291,6 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 24px;
-}
-
-.brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 44px;
-    color: var(--frost);
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.1875rem;
-    letter-spacing: -0.02em;
-    text-decoration: none;
-}
-
-.brand:hover {
-    color: var(--frost);
-}
-
-.brand img {
-    border-radius: 8px;
 }
 
 .nav-links {
@@ -247,6 +338,10 @@ a:hover {
     filter: brightness(1.08);
 }
 
+.lockup + .nav-get {
+    margin-left: auto;
+}
+
 /* Apple's official App Store badge, unaltered (img/app-store-badge.svg). Height stays at or above Apple's
    40 px minimum, and neighbours keep at least a quarter of the badge height as clear space. */
 
@@ -259,6 +354,24 @@ a:hover {
 .store-badge img {
     width: auto;
     height: 54px;
+}
+
+/* A text link to the App Store for pages in languages the badge file doesn't cover. */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    background: var(--frost);
+    color: var(--night);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    color: var(--night);
+    opacity: 0.9;
 }
 
 /* Hero */
@@ -275,33 +388,38 @@ a:hover {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 7.4vw, 6rem);
-    line-height: 0.98;
-    letter-spacing: -0.03em;
+    font-family: var(--font-brand);
+    font-weight: 900;
+    font-size: clamp(2.75rem, 6.6vw, 5.25rem);
+    line-height: 1;
+    letter-spacing: -0.015em;
     max-width: 10ch;
 }
 
 .ring-stop {
     display: inline-block;
-    width: 0.56em;
-    height: 0.56em;
-    margin-left: 0.08em;
-    vertical-align: -0.02em;
+    width: 0.3em;
+    height: 0.3em;
+    margin-left: 0.07em;
+    vertical-align: baseline;
 }
 
-.ring-stop-track {
+.ring-stop circle {
     fill: none;
-    stroke: var(--rim-hi);
-    stroke-width: 7;
+    stroke-width: 132;
 }
 
-.ring-stop-arc {
-    fill: none;
-    stroke-width: 7;
+.ring-stop .stop-track {
+    stroke: var(--ring-track);
+}
+
+.ring-stop .stop-arc,
+.ring-stop .stop-seg {
     stroke-linecap: round;
-    stroke-dasharray: 100;
-    stroke-dashoffset: 0;
-    animation: ring-fill 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.9s both;
+}
+
+.ring-stop .stop-seg {
+    stroke: var(--brand-blue);
 }
 
 .lede {
@@ -327,69 +445,89 @@ a:hover {
     line-height: 1.5;
 }
 
+.hero-former {
+    margin-top: 14px;
+    color: var(--haze);
+    font-size: 0.875rem;
+    line-height: 1.45;
+}
+
 .hero-media {
     position: relative;
     display: grid;
     place-items: center;
-    min-height: 560px;
+    width: min(100%, 560px);
+    aspect-ratio: 1;
+    justify-self: center;
+    container-type: inline-size;
 }
 
 .hero-media::before {
     content: "";
     position: absolute;
-    inset: 12%;
+    inset: 14%;
     border-radius: 50%;
-    background: radial-gradient(closest-side, rgba(0, 204, 179, 0.22), rgba(102, 230, 102, 0.06) 60%, transparent);
+    background: radial-gradient(closest-side, var(--glow), rgba(102, 230, 102, 0.05) 60%, transparent);
     filter: blur(20px);
 }
 
-.orbit {
-    position: absolute;
-    width: min(100%, 620px);
-    aspect-ratio: 1;
-    height: auto;
+/* The brand ring (one ring, never concentric): viewBox 600, r 270, stroke 36. With pathLength 100 the
+   main arc is visible 0-250 degrees and the blue segment 258-310 degrees, round caps included. */
+
+.brand-ring {
     overflow: visible;
 }
 
-.orbit-track {
-    fill: none;
-    stroke: var(--rim);
-    stroke-width: 34;
+.hero .brand-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.orbit-thin {
-    stroke-width: 9;
+.brand-ring circle {
+    fill: none;
+    stroke-width: 36;
 }
 
-.orbit-arc,
-.finale-arc {
-    fill: none;
-    stroke-width: 34;
+.brand-ring .ring-track {
+    stroke: var(--ring-track);
+}
+
+.brand-ring .ring-arc,
+.brand-ring .ring-seg {
     stroke-linecap: round;
-    stroke-dasharray: 100;
 }
 
-.orbit-arc {
-    stroke-dashoffset: 34;
-    animation: ring-fill 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+.brand-ring .ring-arc {
+    stroke-dasharray: 67.322 32.678;
+    stroke-dashoffset: -1.061;
 }
 
-.orbit-macro {
-    fill: none;
-    stroke-width: 9;
-    stroke-linecap: round;
-    stroke-dasharray: 100;
-    animation: ring-fill 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+.brand-ring .ring-seg {
+    stroke: var(--brand-blue);
+    stroke-dasharray: 12.322 87.678;
+    stroke-dashoffset: -72.728;
 }
 
-/* The arcs match the screenshot: protein 50/138 g, carbs 74/248 g, fat 27/73 g. */
-.orbit-protein { stroke: var(--protein); stroke-dashoffset: 64; animation-delay: 0.45s; }
-.orbit-carbs { stroke: var(--carbs); stroke-dashoffset: 70; animation-delay: 0.6s; }
-.orbit-fat { stroke: var(--fat); stroke-dashoffset: 63; animation-delay: 0.75s; }
+.hero .ring-arc {
+    animation: ring-draw 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
 
-@keyframes ring-fill {
+.hero .ring-seg {
+    animation: seg-draw 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 1.45s both;
+}
+
+@keyframes ring-draw {
     from {
-        stroke-dashoffset: 100;
+        stroke-dasharray: 0 100;
+    }
+}
+
+@keyframes seg-draw {
+    from {
+        stroke-dasharray: 0 100;
+        opacity: 0;
     }
 }
 
@@ -403,10 +541,11 @@ a:hover {
     padding: calc(var(--pw) * 0.028);
     border-radius: calc(var(--pw) * 0.155);
     background: linear-gradient(155deg, #2A3441 0%, #0A0E14 22%, #0A0E14 78%, #232C38 100%);
-    box-shadow:
-        0 0 0 1px #2E3947,
-        0 34px 70px -24px rgba(0, 0, 0, 0.85),
-        0 80px 120px -60px rgba(0, 0, 0, 0.7);
+    box-shadow: var(--shadow-phone);
+}
+
+.phone picture {
+    display: block;
 }
 
 .phone img {
@@ -416,8 +555,19 @@ a:hover {
 }
 
 .phone--hero {
-    --pw: clamp(220px, 24vw, 300px);
+    --pw: clamp(130px, 19vw, 224px);
     z-index: 1;
+}
+
+/* The phone is 40% of the ring's width, as on the approved hero board. */
+@supports (width: 1cqi) {
+    .phone--hero {
+        --pw: 40cqi;
+    }
+}
+
+.phone--hero img {
+    background: var(--night);
 }
 
 .shot-card {
@@ -425,9 +575,7 @@ a:hover {
     border-radius: 22px;
     overflow: hidden;
     background: var(--app-bg);
-    box-shadow:
-        0 0 0 1px var(--rim-hi),
-        0 30px 60px -20px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--shadow-card);
 }
 
 .shot-card img {
@@ -512,7 +660,7 @@ a:hover {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    color: var(--teal);
+    color: var(--accent);
     font-size: 0.8125rem;
     font-weight: 700;
     letter-spacing: 0.09em;
@@ -525,9 +673,9 @@ a:hover {
     align-items: center;
     padding: 3px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(250, 179, 77, 0.45);
-    background: rgba(250, 179, 77, 0.1);
-    color: var(--fat);
+    border: 1px solid var(--pill-rim);
+    background: var(--pill-bg);
+    color: var(--pill-ink);
     font-size: 0.6875rem;
     letter-spacing: 0.08em;
 }
@@ -668,9 +816,7 @@ a:hover {
     border-radius: 24px;
     overflow: hidden;
     background: var(--app-bg);
-    box-shadow:
-        0 0 0 1px var(--rim-hi),
-        0 40px 80px -30px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--shadow-card);
 }
 
 .callouts {
@@ -900,29 +1046,30 @@ a:hover {
 }
 
 .compare thead th:last-child {
-    color: var(--teal);
+    color: var(--accent);
 }
 
 .compare .strong {
-    color: var(--teal);
+    color: var(--accent);
     font-weight: 700;
 }
 
-.mark {
+.mark-yes,
+.mark-no {
     display: inline-block;
     vertical-align: middle;
 }
 
-.mark.yes {
+.mark-yes {
     width: 14px;
     height: 24px;
     margin-top: -4px;
-    border-right: 3px solid var(--teal);
-    border-bottom: 3px solid var(--teal);
+    border-right: 3px solid var(--accent);
+    border-bottom: 3px solid var(--accent);
     transform: rotate(45deg) scale(0.8);
 }
 
-.mark.no {
+.mark-no {
     width: 16px;
     height: 2px;
     background: var(--haze);
@@ -979,7 +1126,7 @@ a:hover {
     width: 16px;
     height: 2.5px;
     border-radius: 2px;
-    background: var(--teal);
+    background: var(--accent);
     transition: transform 0.2s ease;
 }
 
@@ -1022,13 +1169,22 @@ a:hover {
     height: auto;
 }
 
-.finale-arc {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+.finale .ring-arc,
+.finale .ring-seg {
+    transition: stroke-dasharray 1.6s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.4s ease;
 }
 
-.js .finale:not(.is-drawn) .finale-arc {
-    stroke-dashoffset: 100;
+.finale .ring-seg {
+    transition-delay: 1.2s;
+}
+
+.js .finale:not(.is-drawn) .ring-arc {
+    stroke-dasharray: 0 100;
+}
+
+.js .finale:not(.is-drawn) .ring-seg {
+    stroke-dasharray: 0 100;
+    opacity: 0;
 }
 
 .finale-copy {
@@ -1067,20 +1223,6 @@ a:hover {
     align-items: center;
 }
 
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--frost);
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.125rem;
-}
-
-.footer-brand img {
-    border-radius: 7px;
-}
-
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -1100,6 +1242,11 @@ a:hover {
 }
 
 .footer-links a:hover {
+    color: var(--frost);
+    text-decoration: underline;
+}
+
+.footer-links a[aria-current="page"] {
     color: var(--frost);
     text-decoration: underline;
 }
@@ -1128,6 +1275,12 @@ a:hover {
 
 .support-head .lede {
     margin-top: 18px;
+}
+
+.support-former {
+    margin-top: 14px;
+    color: var(--haze);
+    font-size: 0.9375rem;
 }
 
 .support-jump {
@@ -1196,13 +1349,299 @@ a:hover {
 }
 
 .steps li::marker {
-    color: var(--teal);
+    color: var(--accent);
     font-weight: 700;
 }
 
 .steps-plain li::marker,
 .link-list li::marker {
-    color: var(--teal);
+    color: var(--accent);
+}
+
+/* Guides and comparison pages */
+
+.guide {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 80px) var(--gutter) 24px;
+}
+
+.guide--wide {
+    max-width: 64rem;
+}
+
+.guide-head h1 {
+    font-size: clamp(2.25rem, 5.6vw, 3.75rem);
+}
+
+.guide-head .lede {
+    margin-top: 18px;
+    max-width: 40rem;
+}
+
+.lang-switch {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background: var(--raise);
+    box-shadow: inset 0 0 0 1px var(--rim-hi);
+    color: var(--frost);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lang-switch a:hover {
+    background: var(--rim-hi);
+    color: var(--frost);
+}
+
+.lang-switch a[aria-current="page"] {
+    background: var(--frost);
+    box-shadow: none;
+    color: var(--night);
+}
+
+.guide-section {
+    margin-top: 56px;
+}
+
+.guide-section > h2,
+.guide-cta h2 {
+    margin-bottom: 14px;
+    color: var(--frost);
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+.guide-section > p {
+    max-width: 42rem;
+}
+
+.guide-section > p + p {
+    margin-top: 14px;
+}
+
+.guide-section > ul + p {
+    margin-top: 20px;
+}
+
+.guide-section > .support-card {
+    margin-top: 0;
+}
+
+.guide-steps {
+    margin-top: 22px;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    gap: 22px;
+}
+
+.guide-steps li {
+    position: relative;
+    padding-left: 56px;
+    counter-increment: step;
+}
+
+.guide-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--teal);
+    color: var(--frost);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.guide-steps h3 {
+    color: var(--frost);
+    font-size: 1.1875rem;
+    line-height: 1.35;
+}
+
+.guide-steps p {
+    margin-top: 6px;
+    max-width: 40rem;
+}
+
+.guide-section .faq {
+    margin-top: 8px;
+}
+
+.guide-cta {
+    margin-top: 64px;
+    padding: clamp(22px, 3.4vw, 36px);
+    border-radius: 24px;
+    background: var(--deck);
+    box-shadow: inset 0 0 0 1px var(--rim);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 32px;
+}
+
+.guide-cta h2 {
+    margin-bottom: 6px;
+}
+
+.guide-cta p {
+    color: var(--haze);
+}
+
+.vs-scroll {
+    margin-top: 24px;
+    overflow-x: auto;
+    border-radius: 20px;
+    background: var(--deck);
+    box-shadow: inset 0 0 0 1px var(--rim);
+}
+
+.vs {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    font-size: 0.9875rem;
+    line-height: 1.5;
+}
+
+.vs caption {
+    padding: 16px 18px 0;
+    color: var(--haze);
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.vs th,
+.vs td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rim);
+    text-align: left;
+    vertical-align: top;
+}
+
+.vs tbody tr:last-child th,
+.vs tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.vs thead th {
+    color: var(--haze);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.vs tbody th {
+    width: 22%;
+    color: var(--frost);
+    font-weight: 650;
+}
+
+.vs .vs-us {
+    background: rgba(0, 204, 179, 0.07);
+}
+
+.vs thead .vs-us {
+    color: var(--accent);
+}
+
+/* Narrow screens: each row becomes a labelled block, so all three approaches stay visible side by side in
+   reading order. The table keeps explicit ARIA roles, so it is still announced as a table. */
+@media (max-width: 640px) {
+    .vs {
+        min-width: 0;
+    }
+
+    .vs thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .vs,
+    .vs tbody,
+    .vs tr,
+    .vs th,
+    .vs td {
+        display: block;
+        width: auto;
+    }
+
+    .vs caption {
+        display: block;
+        padding: 16px 16px 4px;
+    }
+
+    .vs tbody tr {
+        padding: 16px;
+        border-bottom: 1px solid var(--rim);
+    }
+
+    .vs tbody tr:last-child {
+        border-bottom: 0;
+    }
+
+    .vs tbody th {
+        width: auto;
+        padding: 0 0 8px;
+        border: 0;
+        font-size: 1.0625rem;
+    }
+
+    .vs tbody td {
+        display: grid;
+        grid-template-columns: 7.25rem minmax(0, 1fr);
+        gap: 12px;
+        padding: 6px 0;
+        border: 0;
+    }
+
+    .vs tbody td::before {
+        content: attr(data-label);
+        color: var(--frost);
+        font-weight: 700;
+        font-size: 0.875rem;
+    }
+
+    .vs tbody td.vs-us {
+        background: none;
+    }
+
+    .vs tbody td.vs-us::before {
+        color: var(--accent);
+    }
+}
+
+.vs-notes {
+    margin-top: 18px;
+    display: grid;
+    gap: 10px;
+    color: var(--haze);
+    font-size: 0.9375rem;
 }
 
 /* Legal pages */
@@ -1261,8 +1700,8 @@ a:hover {
 
 .toc-list a.is-active {
     background: var(--raise);
-    color: var(--teal);
-    box-shadow: inset 3px 0 0 var(--teal);
+    color: var(--accent);
+    box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .legal-content {
@@ -1318,7 +1757,7 @@ a:hover {
 }
 
 .legal-content li::marker {
-    color: var(--teal);
+    color: var(--accent);
 }
 
 .legal-content strong {
@@ -1328,6 +1767,11 @@ a:hover {
 .legal-date {
     margin-top: 14px;
     padding-bottom: 20px;
+    color: var(--haze);
+}
+
+.legal-content .legal-former {
+    margin: -6px 0 20px;
     color: var(--haze);
 }
 
@@ -1386,15 +1830,6 @@ a:hover {
     .hero {
         grid-template-columns: 1fr;
         text-align: left;
-    }
-
-    .hero-media {
-        min-height: 0;
-        padding: 24px 0;
-    }
-
-    .orbit {
-        width: min(100%, 460px);
     }
 
     .annotated {
@@ -1537,17 +1972,17 @@ a:hover {
         font-size: 1rem;
     }
 
+    .nav-inner {
+        gap: 12px;
+    }
+
     .hero h1 {
-        font-size: clamp(2.75rem, 13.5vw, 3.5rem);
+        font-size: clamp(2.5rem, 12.5vw, 3.25rem);
     }
 
     .hero-actions {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .phone--hero {
-        --pw: min(56vw, 230px);
     }
 
     .hero .store-badge img {
@@ -1624,6 +2059,14 @@ a:hover {
         margin-left: 32px;
     }
 
+    .guide-steps li {
+        padding-left: 50px;
+    }
+
+    .guide-steps li::before {
+        width: 34px;
+        height: 34px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1631,18 +2074,23 @@ a:hover {
         scroll-behavior: auto;
     }
 
-    .orbit-arc,
-    .orbit-macro,
-    .ring-stop-arc {
+    .hero .ring-arc,
+    .hero .ring-seg {
         animation: none;
     }
 
-    .finale-arc {
+    .finale .ring-arc,
+    .finale .ring-seg {
         transition: none;
     }
 
-    .js .finale:not(.is-drawn) .finale-arc {
-        stroke-dashoffset: 0;
+    .js .finale:not(.is-drawn) .ring-arc {
+        stroke-dasharray: 67.322 32.678;
+    }
+
+    .js .finale:not(.is-drawn) .ring-seg {
+        stroke-dasharray: 12.322 87.678;
+        opacity: 1;
     }
 
     .faq summary::before,
@@ -1652,13 +2100,22 @@ a:hover {
 }
 
 @media (forced-colors: active) {
-    .orbit-arc,
-    .finale-arc,
-    .ring-stop-arc {
+    .brand-ring .ring-arc,
+    .brand-ring .ring-seg,
+    .mark-arc,
+    .mark-seg,
+    .ring-stop .stop-arc,
+    .ring-stop .stop-seg {
         stroke: CanvasText;
     }
 
-    .nav-get {
+    .wm-i {
+        background: none;
+        color: inherit;
+    }
+
+    .nav-get,
+    .cta-button {
         border: 1px solid ButtonText;
     }
 }

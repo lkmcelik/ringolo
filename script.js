@@ -1,4 +1,4 @@
-// Calorify site. Everything works without this file; it only adds two touches.
+// Ringolo site (formerly Calorify). Everything works without this file; it only adds two touches.
 
 (function () {
     'use strict';

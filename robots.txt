@@ -1,4 +1,4 @@
-# Robots.txt for Calorify
+# Robots.txt for Ringolo (formerly Calorify)
 # Allow all search engines and AI crawlers to index the site
 
 User-agent: *
@@ -25,6 +25,21 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 # Optimize crawl rate for major search engines

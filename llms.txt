@@ -1,0 +1,19 @@
+# Ringolo
+
+> Ringolo (formerly Calorify) is an AI calorie counter and macro tracker for iPhone and iPad. Snap a meal and Ringolo estimates calories, protein, carbs and fat for every item; each meal fills a daily ring that shows what's left. Ringolo was called Calorify until December 2026.
+
+- Logging: photo scan, voice, food search (everyday foods and local dishes, 15 languages), manual entry, favorites and recent foods. Every AI estimate can be checked and edited before it's saved.
+- Tracking: a daily calorie ring with protein, carbs and fat targets, water, weight with a goal line, streaks, reports for a week, month, 3 months or a year, and Home Screen and Lock Screen widgets.
+- Premium: AI photo scans, voice logging and AI insights are part of Ringolo Premium, an auto-renewing subscription. New accounts can try photo scans in their first days.
+- Platforms: iPhone and iPad with iOS or iPadOS 17.6 or later; 15 languages.
+- Not a medical device. Nutrition values are estimates for general information.
+
+## Pages
+
+- [Home](https://lkmcelik.github.io/calorify/): features, Free and Premium, FAQ
+- [How to count calories from a photo](https://lkmcelik.github.io/calorify/count-calories-from-a-photo/): also in [Italian](https://lkmcelik.github.io/calorify/it/contare-le-calorie-da-una-foto/), [German](https://lkmcelik.github.io/calorify/de/kalorien-per-foto-zaehlen/) and [Turkish](https://lkmcelik.github.io/calorify/tr/fotograftan-kalori-hesaplama/)
+- [Ringolo vs typical calorie counters](https://lkmcelik.github.io/calorify/ringolo-vs-typical-calorie-counters/): a feature comparison with manual logging and barcode-only apps
+- [Support](https://lkmcelik.github.io/calorify/support/): subscriptions, restoring purchases, deleting your account
+- [Privacy Policy](https://lkmcelik.github.io/calorify/privacy.html)
+- [Terms of Service](https://lkmcelik.github.io/calorify/terms.html)
+- [App Store](https://apps.apple.com/app/id6749366793)

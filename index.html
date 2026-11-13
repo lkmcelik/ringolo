@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calorify: AI calorie counter and macro tracker for iPhone and iPad</title>
-    <meta name="description" content="Snap a meal and Calorify estimates calories, protein, carbs and fat for every item. Log by voice or search, track water, and see your week in reports.">
+    <title>Ringolo: AI calorie counter and macro tracker for iPhone and iPad</title>
+    <meta name="description" content="Snap a meal and Ringolo (formerly Calorify) estimates calories, protein, carbs and fat for every item. Log by voice or search, track water, and see your week in reports.">
     <link rel="canonical" href="https://lkmcelik.github.io/calorify/">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="#070B12">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#070B12" media="(prefers-color-scheme: dark)">
     <meta name="apple-itunes-app" content="app-id=6749366793">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Calorify">
+    <meta property="og:site_name" content="Ringolo">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://lkmcelik.github.io/calorify/">
-    <meta property="og:title" content="Calorify: your day, one ring">
+    <meta property="og:title" content="Ringolo: your day, one ring">
     <meta property="og:description" content="AI calorie counter for iPhone and iPad. Snap a meal for calories and macros on every item, log by voice or search, and see what's left in one ring.">
-    <meta property="og:image" content="https://lkmcelik.github.io/calorify/img/og-image.jpg">
+    <meta property="og:image" content="https://lkmcelik.github.io/calorify/img/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Calorify's Journal screen on an iPhone inside a teal-to-green ring, with the words: Your day, one ring.">
+    <meta property="og:image:alt" content="Ringolo&#39;s Journal screen on an iPhone inside the Ringolo ring, with the words: Your day, one ring.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Calorify: your day, one ring">
+    <meta name="twitter:title" content="Ringolo: your day, one ring">
     <meta name="twitter:description" content="AI calorie counter for iPhone and iPad. Snap a meal for calories and macros on every item, log by voice or search, and see what's left in one ring.">
-    <meta name="twitter:image" content="https://lkmcelik.github.io/calorify/img/og-image.jpg">
-    <meta name="twitter:image:alt" content="Calorify's Journal screen on an iPhone inside a teal-to-green ring, with the words: Your day, one ring.">
+    <meta name="twitter:image" content="https://lkmcelik.github.io/calorify/img/og-image.png">
+    <meta name="twitter:image:alt" content="Ringolo&#39;s Journal screen on an iPhone inside the Ringolo ring, with the words: Your day, one ring.">
 
     <link rel="icon" type="image/png" sizes="64x64" href="img/icon-64.png">
     <link rel="apple-touch-icon" href="img/icon-180.png">
-    <link rel="preload" as="image" href="img/journal-today.webp" type="image/webp">
+    <link rel="preload" as="image" href="img/journal-today-light.webp" type="image/webp" media="(prefers-color-scheme: light)">
+    <link rel="preload" as="image" href="img/journal-today.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&amp;display=swap">
     <link rel="stylesheet" href="style.css">
     <script>document.documentElement.classList.add('js');</script>
 
@@ -40,7 +46,8 @@
         {
           "@type": "WebSite",
           "@id": "https://lkmcelik.github.io/calorify/#website",
-          "name": "Calorify",
+          "name": "Ringolo",
+          "alternateName": "Calorify",
           "url": "https://lkmcelik.github.io/calorify/",
           "inLanguage": "en",
           "publisher": { "@id": "https://lkmcelik.github.io/calorify/#publisher" }
@@ -48,7 +55,8 @@
         {
           "@type": "Organization",
           "@id": "https://lkmcelik.github.io/calorify/#publisher",
-          "name": "Calorify",
+          "name": "Ringolo",
+          "alternateName": "Calorify",
           "url": "https://lkmcelik.github.io/calorify/",
           "logo": "https://lkmcelik.github.io/calorify/img/icon-180.png",
           "email": "lkmcelik@hotmail.com"
@@ -56,8 +64,9 @@
         {
           "@type": "MobileApplication",
           "@id": "https://lkmcelik.github.io/calorify/#app",
-          "name": "Calorify",
-          "description": "AI calorie counter and macro tracker for iPhone and iPad. Snap a meal and Calorify estimates calories, protein, carbs and fat for every item; log by voice, search or manual entry; track water, streaks and achievements; see reports for a week, month, 3 months or a year; and get AI insights with one-tap water and meal reminders.",
+          "name": "Ringolo",
+          "alternateName": "Calorify",
+          "description": "AI calorie counter and macro tracker for iPhone and iPad, formerly called Calorify. Snap a meal and Ringolo estimates calories, protein, carbs and fat for every item; log by voice, search or manual entry; track water, streaks and achievements; see reports for a week, month, 3 months or a year; and get AI insights with one-tap water and meal reminders.",
           "operatingSystem": "iOS 17.6 or later, iPadOS 17.6 or later",
           "applicationCategory": "HealthApplication",
           "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt", "nl", "pl", "ru", "ja", "ko", "zh-Hans", "ar", "hi"],
@@ -95,7 +104,7 @@
             "price": "0",
             "priceCurrency": "USD",
             "category": "free",
-            "description": "Free to download. Offers in-app purchases: Calorify Premium, an optional auto-renewing subscription."
+            "description": "Free to download. Offers in-app purchases: Ringolo Premium, an optional auto-renewing subscription."
           },
           "publisher": { "@id": "https://lkmcelik.github.io/calorify/#publisher" }
         },
@@ -105,18 +114,18 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "How does Calorify count calories?",
+              "name": "How does Ringolo count calories?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Take a photo and Calorify's AI estimates the portion, calories, protein, carbs and fat of each item on the plate. You can also say what you ate, search for a food or enter it yourself. You can check and edit every item before it's added to your day."
+                "text": "Take a photo and Ringolo's AI estimates the portion, calories, protein, carbs and fat of each item on the plate. You can also say what you ate, search for a food or enter it yourself. You can check and edit every item before it's added to your day."
               }
             },
             {
               "@type": "Question",
-              "name": "Is Calorify free?",
+              "name": "Is Ringolo free?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Calorify is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Calorify Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe."
+                "text": "Ringolo is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Ringolo Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe."
               }
             },
             {
@@ -124,23 +133,23 @@
               "name": "How accurate are the photo estimates?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "They're AI estimates, so treat them as a starting point. Tap any item to fix its name or portion, or remove it, before you add the meal. Calorify is not a medical device and doesn't give medical advice."
+                "text": "They're AI estimates, so treat them as a starting point. Tap any item to fix its name or portion, or remove it, before you add the meal. Ringolo is not a medical device and doesn't give medical advice."
               }
             },
             {
               "@type": "Question",
-              "name": "Does Calorify work with Apple Health?",
+              "name": "Does Ringolo work with Apple Health?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, if you want it to. With your permission, Calorify reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional."
+                "text": "Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional."
               }
             },
             {
               "@type": "Question",
-              "name": "Which devices and languages does Calorify support?",
+              "name": "Which devices and languages does Ringolo support?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Calorify runs on iPhone and iPad with iOS or iPadOS 17.6 or later, in light or dark appearance, and in 15 languages: English, Turkish, German, Spanish, French, Italian, Portuguese, Dutch, Polish, Russian, Japanese, Korean, Simplified Chinese, Arabic and Hindi."
+                "text": "Ringolo runs on iPhone and iPad with iOS or iPadOS 17.6 or later, in light or dark appearance, and in 15 languages: English, Turkish, German, Spanish, French, Italian, Portuguese, Dutch, Polish, Russian, Japanese, Korean, Simplified Chinese, Arabic and Hindi."
               }
             },
             {
@@ -162,16 +171,13 @@
 
     <header class="site-nav">
         <div class="nav-inner">
-            <a class="brand" href="#top">
-                <img src="img/icon-64.png" alt="" width="32" height="32">
-                <span>Calorify</span>
-            </a>
+            <a class="lockup" href="#top" aria-label="Ringolo"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-nav" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-nav)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><span class="wordmark">R<span class="wm-i">i</span>ngolo</span></a>
             <nav class="nav-links" aria-label="Sections">
                 <a href="#log">Features</a>
                 <a href="#premium">Free and Premium</a>
                 <a href="#faq">FAQ</a>
             </nav>
-            <a class="nav-get" href="https://apps.apple.com/app/id6749366793" rel="noopener">Download<span class="visually-hidden"> Calorify on the App Store</span></a>
+            <a class="nav-get" href="https://apps.apple.com/app/id6749366793" rel="noopener">Download<span class="visually-hidden"> Ringolo on the App Store</span></a>
         </div>
     </header>
 
@@ -179,30 +185,29 @@
         <section class="hero" id="top" aria-labelledby="hero-title">
             <div class="hero-copy">
                 <p class="eyebrow">AI calorie counter for iPhone and iPad</p>
-                <h1 id="hero-title" class="display">Your day, one&nbsp;ring<svg class="ring-stop" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><defs><linearGradient id="ring-gradient-stop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle cx="20" cy="20" r="14" class="ring-stop-track"/><circle cx="20" cy="20" r="14" class="ring-stop-arc" pathLength="100" transform="rotate(-90 20 20)" stroke="url(#ring-gradient-stop)"/></svg></h1>
-                <p class="lede">Snap a meal and Calorify estimates calories, protein, carbs and fat for every item on the plate. Each meal fills your daily ring, so you always see what's left.</p>
+                <h1 id="hero-title" class="display">Your day, one&nbsp;ring<svg class="ring-stop" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-stop" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="stop-track" cx="512" cy="512" r="300"/><circle class="stop-arc" cx="512" cy="512" r="300" stroke="url(#g-stop)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="stop-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg></h1>
+                <p class="lede">Snap a meal and Ringolo estimates calories, protein, carbs and fat for every item. Each meal fills your daily ring, so you always see what's left.</p>
                 <div class="hero-actions">
                     <a class="store-badge" href="https://apps.apple.com/app/id6749366793" rel="noopener">
                         <img src="img/app-store-badge.svg" width="162" height="54" alt="Download on the App Store">
                     </a>
                     <p class="hero-note">Free to download. Premium adds unlimited photo scans, voice logging and AI&nbsp;insights.</p>
                 </div>
+                <p class="hero-former">Ringolo was called Calorify until December 2026.</p>
             </div>
             <div class="hero-media">
-                <svg class="orbit" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-                    <defs><linearGradient id="ring-gradient-hero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs>
-                    <circle class="orbit-track" cx="300" cy="300" r="270"/>
-                    <circle class="orbit-arc" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)" stroke="url(#ring-gradient-hero)"/>
-                    <circle class="orbit-track orbit-thin" cx="300" cy="300" r="228"/>
-                    <circle class="orbit-macro orbit-protein" cx="300" cy="300" r="228" pathLength="100" transform="rotate(-90 300 300)"/>
-                    <circle class="orbit-track orbit-thin" cx="300" cy="300" r="206"/>
-                    <circle class="orbit-macro orbit-carbs" cx="300" cy="300" r="206" pathLength="100" transform="rotate(-90 300 300)"/>
-                    <circle class="orbit-track orbit-thin" cx="300" cy="300" r="184"/>
-                    <circle class="orbit-macro orbit-fat" cx="300" cy="300" r="184" pathLength="100" transform="rotate(-90 300 300)"/>
+                <svg class="brand-ring" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+                    <defs><linearGradient id="g-ring-hero" gradientUnits="userSpaceOnUse" x1="579.4" y1="20.6" x2="20.6" y2="579.4" gradientTransform="rotate(90 300 300)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs>
+                    <circle class="ring-track" cx="300" cy="300" r="270"/>
+                    <circle class="ring-arc" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)" stroke="url(#g-ring-hero)"/>
+                    <circle class="ring-seg" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)"/>
                 </svg>
                 <div class="phone phone--hero">
-                    <img src="img/journal-today.webp" width="720" height="1564" fetchpriority="high"
-                         alt="Calorify's Journal on iPhone: a 12-day streak, and a ring showing 1,450 kcal left of a 2,200 kcal goal, with 750 eaten, 320 burned, and protein, carbs and fat rings below it.">
+                    <picture>
+                        <source srcset="img/journal-today.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                        <img src="img/journal-today-light.webp" width="720" height="1564" fetchpriority="high"
+                         alt="Ringolo's Journal on iPhone: a 12-day streak, and a ring showing 1,450 kcal left of a 2,200 kcal goal, with 750 eaten, 320 burned, and protein, carbs and fat rings below it.">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -224,7 +229,7 @@
                 <div class="feature-copy">
                     <h3 id="photo-title" class="feature-label">AI photo scan</h3>
                     <p class="tagline display">Point. Snap. Know.</p>
-                    <p>Take a photo or choose one from your library. Calorify finds each item on the plate and estimates its portion, calories, protein, carbs and fat.</p>
+                    <p>Take a photo or choose one from your library. Ringolo finds each item on the plate and estimates its portion, calories, protein, carbs and fat.</p>
                     <ul class="dots">
                         <li>Tap any item to fix its name or portion, or remove it.</li>
                         <li>Before you add the meal, the ring shows what's left after it.</li>
@@ -248,7 +253,7 @@
                 <div class="feature-copy">
                     <h3 id="voice-title" class="feature-label">Voice logging <span class="pill">Premium</span></h3>
                     <p class="tagline display">Or just say it.</p>
-                    <p>Tap the microphone and say what you ate, the way you'd tell a friend. Check the transcript, edit it if you need to, and Calorify turns it into foods with calories and macros you can review before adding.</p>
+                    <p>Tap the microphone and say what you ate, the way you'd tell a friend. Check the transcript, edit it if you need to, and Ringolo turns it into foods with calories and macros you can review before adding.</p>
                     <ul class="quotes" aria-label="Things you can say">
                         <li>“I ate an apple for breakfast”</li>
                         <li>“Log 2 slices of pizza for lunch”</li>
@@ -258,7 +263,7 @@
                 <div class="feature-media">
                     <div class="phone">
                         <img src="img/voice.webp" width="720" height="1564" loading="lazy" decoding="async"
-                             alt="Voice mode after a recording: the transcription reads 'Two eggs and a slice of toast' while Calorify analyzes the food.">
+                             alt="Voice mode after a recording: the transcription reads 'Two eggs and a slice of toast' while Ringolo analyzes the food.">
                     </div>
                     <div class="shot-card">
                         <img src="img/voice-review-card.webp" width="640" height="564" loading="lazy" decoding="async"
@@ -363,7 +368,7 @@
                 <div class="feature-copy">
                     <h3 id="insights-title" class="feature-label">AI insights <span class="pill">Premium</span></h3>
                     <p class="tagline display">Small steps from what you really&nbsp;ate.</p>
-                    <p>For the range you pick, Calorify reads your logged days and shows the one or two changes that matter most, each with the numbers behind it and one thing to try.</p>
+                    <p>For the range you pick, Ringolo reads your logged days and shows the one or two changes that matter most, each with the numbers behind it and one thing to try.</p>
                     <ul class="dots">
                         <li>When a tip is about timing, turn on a water or meal reminder with one tap.</li>
                         <li>See what went well compared with the period before.</li>
@@ -405,7 +410,7 @@
                 <div class="feature-media">
                     <div class="shot-card shot-card--widgets">
                         <img src="img/widgets.webp" width="720" height="1096" loading="lazy" decoding="async"
-                             alt="Calorify's widgets: a small Home Screen widget with 1,450 kcal left of 2,200; a medium one with the ring, protein 50 of 138 g, carbs 74 of 248 g, fat 27 of 73 g, 1,250 ml of water and a scan button; and circular and rectangular Lock Screen widgets with 1,450 kcal left and protein 50 of 138 g.">
+                             alt="Ringolo's widgets: a small Home Screen widget with 1,450 kcal left of 2,200; a medium one with the ring, protein 50 of 138 g, carbs 74 of 248 g, fat 27 of 73 g, 1,250 ml of water and a scan button; and circular and rectangular Lock Screen widgets with 1,450 kcal left and protein 50 of 138 g.">
                     </div>
                 </div>
             </article>
@@ -443,24 +448,24 @@
             <div class="group-head">
                 <p class="eyebrow">Free and Premium</p>
                 <h2 id="premium-title" class="display">What you get</h2>
-                <p>The core of Calorify is free. Calorify Premium unlocks the AI features without limits.</p>
+                <p>The core of Ringolo is free. Ringolo Premium unlocks the AI features without limits.</p>
             </div>
             <div class="compare-wrap">
                 <table class="compare">
-                    <caption class="visually-hidden">Features on the free plan and with Calorify Premium</caption>
+                    <caption class="visually-hidden">Features on the free plan and with Ringolo Premium</caption>
                     <thead>
                         <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Premium</th></tr>
                     </thead>
                     <tbody>
-                        <tr><th scope="row">Journal, search and manual entry</th><td><span class="mark yes" role="img" aria-label="Included"></span></td><td><span class="mark yes" role="img" aria-label="Included"></span></td></tr>
-                        <tr><th scope="row">Reports and water</th><td><span class="mark yes" role="img" aria-label="Included"></span></td><td><span class="mark yes" role="img" aria-label="Included"></span></td></tr>
+                        <tr><th scope="row">Journal, search and manual entry</th><td><span class="mark-yes" role="img" aria-label="Included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
+                        <tr><th scope="row">Reports and water</th><td><span class="mark-yes" role="img" aria-label="Included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
                         <tr><th scope="row">Photo scans</th><td>3-day trial</td><td class="strong">Unlimited</td></tr>
-                        <tr><th scope="row">Voice logging</th><td><span class="mark no" role="img" aria-label="Not included"></span></td><td><span class="mark yes" role="img" aria-label="Included"></span></td></tr>
-                        <tr><th scope="row">AI insights</th><td><span class="mark no" role="img" aria-label="Not included"></span></td><td><span class="mark yes" role="img" aria-label="Included"></span></td></tr>
+                        <tr><th scope="row">Voice logging</th><td><span class="mark-no" role="img" aria-label="Not included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
+                        <tr><th scope="row">AI insights</th><td><span class="mark-no" role="img" aria-label="Not included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
                     </tbody>
                 </table>
                 <div class="compare-notes">
-                    <p>Calorify Premium is an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe, and you can cancel anytime in your Apple Account settings.</p>
+                    <p>Ringolo Premium is an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe, and you can cancel anytime in your Apple Account settings.</p>
                     <p>The 3-day photo scan trial starts when you finish setup on a new account, includes a daily number of scans, and is available once per person and device.</p>
                 </div>
             </div>
@@ -473,24 +478,24 @@
             </div>
             <div class="faq">
                 <details>
-                    <summary>How does Calorify count calories?</summary>
-                    <p>Take a photo and Calorify's AI estimates the portion, calories, protein, carbs and fat of each item on the plate. You can also say what you ate, search for a food or enter it yourself. You can check and edit every item before it's added to your day.</p>
+                    <summary>How does Ringolo count calories?</summary>
+                    <p>Take a photo and Ringolo's AI estimates the portion, calories, protein, carbs and fat of each item on the plate. You can also say what you ate, search for a food or enter it yourself. You can check and edit every item before it's added to your day.</p>
                 </details>
                 <details>
-                    <summary>Is Calorify free?</summary>
-                    <p>Calorify is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Calorify Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe.</p>
+                    <summary>Is Ringolo free?</summary>
+                    <p>Ringolo is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Ringolo Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe.</p>
                 </details>
                 <details>
                     <summary>How accurate are the photo estimates?</summary>
-                    <p>They're AI estimates, so treat them as a starting point. Tap any item to fix its name or portion, or remove it, before you add the meal. Calorify is not a medical device and doesn't give medical advice.</p>
+                    <p>They're AI estimates, so treat them as a starting point. Tap any item to fix its name or portion, or remove it, before you add the meal. Ringolo is not a medical device and doesn't give medical advice.</p>
                 </details>
                 <details>
-                    <summary>Does Calorify work with Apple Health?</summary>
-                    <p>Yes, if you want it to. With your permission, Calorify reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional.</p>
+                    <summary>Does Ringolo work with Apple Health?</summary>
+                    <p>Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional.</p>
                 </details>
                 <details>
-                    <summary>Which devices and languages does Calorify support?</summary>
-                    <p>Calorify runs on iPhone and iPad with iOS or iPadOS 17.6 or later, in light or dark appearance, and in 15 languages: English, Turkish, German, Spanish, French, Italian, Portuguese, Dutch, Polish, Russian, Japanese, Korean, Simplified Chinese, Arabic and Hindi.</p>
+                    <summary>Which devices and languages does Ringolo support?</summary>
+                    <p>Ringolo runs on iPhone and iPad with iOS or iPadOS 17.6 or later, in light or dark appearance, and in 15 languages: English, Turkish, German, Spanish, French, Italian, Portuguese, Dutch, Polish, Russian, Japanese, Korean, Simplified Chinese, Arabic and Hindi.</p>
                 </details>
                 <details>
                     <summary>What happens to my food photos and voice recordings?</summary>
@@ -501,14 +506,15 @@
         </section>
 
         <section class="finale" id="download" aria-labelledby="download-title">
-            <svg class="finale-ring" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-                <defs><linearGradient id="ring-gradient-finale" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs>
-                <circle class="orbit-track" cx="300" cy="300" r="270"/>
-                <circle class="finale-arc" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)" stroke="url(#ring-gradient-finale)"/>
+            <svg class="brand-ring finale-ring" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="g-ring-finale" gradientUnits="userSpaceOnUse" x1="579.4" y1="20.6" x2="20.6" y2="579.4" gradientTransform="rotate(90 300 300)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs>
+                <circle class="ring-track" cx="300" cy="300" r="270"/>
+                <circle class="ring-arc" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)" stroke="url(#g-ring-finale)"/>
+                <circle class="ring-seg" cx="300" cy="300" r="270" pathLength="100" transform="rotate(-90 300 300)"/>
             </svg>
             <div class="finale-copy">
                 <h2 id="download-title" class="display">Start with your next meal</h2>
-                <p>Calorify is free to download for iPhone and iPad.</p>
+                <p>Ringolo is free to download for iPhone and iPad.</p>
                 <a class="store-badge" href="https://apps.apple.com/app/id6749366793" rel="noopener">
                     <img src="img/app-store-badge.svg" width="162" height="54" alt="Download on the App Store">
                 </a>
@@ -518,20 +524,20 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-brand">
-                <img src="img/icon-64.png" alt="" width="28" height="28">
-                <span>Calorify</span>
-            </div>
-            <nav class="footer-links" aria-label="Legal and contact">
+            <div class="lockup lockup--stacked" role="img" aria-label="Ringolo"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-foot" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-foot)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><span class="wordmark">R<span class="wm-i">i</span>ngolo</span></div>
+            <nav class="footer-links" aria-label="Site">
+                <a href="count-calories-from-a-photo/">How to count calories from a photo</a>
+                <a href="ringolo-vs-typical-calorie-counters/">Ringolo vs typical calorie counters</a>
                 <a href="support/">Support</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
                 <a href="mailto:lkmcelik@hotmail.com">Contact</a>
             </nav>
             <div class="footer-fine">
-                <p>Calorify is not a medical device. Nutrition values are estimates for general information.</p>
+                <p>Ringolo is not a medical device. Nutrition values are estimates for general information.</p>
+                <p>Ringolo was called Calorify until December 2026.</p>
                 <p>Apple, the Apple logo, iPhone, iPad, Apple Health and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
-                <p>&copy; 2026 Calorify</p>
+                <p>&copy; 2026 Ringolo</p>
             </div>
         </div>
     </footer>
