@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ringolo: AI calorie counter and macro tracker for iPhone and iPad</title>
-    <meta name="description" content="Snap a meal and Ringolo (formerly Calorify) estimates calories, protein, carbs and fat for every item. Log by voice or search, track water, and see your week in reports.">
+    <meta name="description" content="Snap a meal and Ringolo (formerly Calorify) estimates calories, protein, carbs and fat for every item. Log by voice or search, track water and weight, and see your progress in reports.">
     <link rel="canonical" href="https://lkmcelik.github.io/calorify/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="color-scheme" content="light dark">
@@ -33,9 +33,6 @@
     <link rel="apple-touch-icon" href="img/icon-180.png">
     <link rel="preload" as="image" href="img/journal-today-light.webp" type="image/webp" media="(prefers-color-scheme: light)">
     <link rel="preload" as="image" href="img/journal-today.webp" type="image/webp" media="(prefers-color-scheme: dark)">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&amp;display=swap">
     <link rel="stylesheet" href="style.css">
     <script>document.documentElement.classList.add('js');</script>
 
@@ -66,7 +63,7 @@
           "@id": "https://lkmcelik.github.io/calorify/#app",
           "name": "Ringolo",
           "alternateName": "Calorify",
-          "description": "AI calorie counter and macro tracker for iPhone and iPad, formerly called Calorify. Snap a meal and Ringolo estimates calories, protein, carbs and fat for every item; log by voice, search or manual entry; track water, streaks and achievements; see reports for a week, month, 3 months or a year; and get AI insights with one-tap water and meal reminders.",
+          "description": "AI calorie counter and macro tracker for iPhone and iPad, formerly called Calorify. Snap a meal and Ringolo estimates calories, protein, carbs and fat for every item; log by voice, search or manual entry; track water, weight, streaks and achievements; get meal, water and weekly weigh-in reminders; see reports for a week, month, 3 months or a year; and get AI insights.",
           "operatingSystem": "iOS 17.6 or later, iPadOS 17.6 or later",
           "applicationCategory": "HealthApplication",
           "inLanguage": ["en", "tr", "de", "es", "fr", "it", "pt", "nl", "pl", "ru", "ja", "ko", "zh-Hans", "ar", "hi"],
@@ -90,6 +87,8 @@
             "Manual entry",
             "Daily calorie ring with protein, carbs and fat targets",
             "Water tracking",
+            "Weight tracking with a goal line, a weekly weigh-in reminder and Apple Health sync",
+            "Meal reminders, plus a one-time reminder for your next meal",
             "Logging streaks and achievements",
             "Reports for a week, month, 3 months or a year",
             "AI insights with one-tap water and meal reminders",
@@ -98,14 +97,6 @@
             "Light and dark appearance",
             "15 languages"
           ],
-          "isAccessibleForFree": true,
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "category": "free",
-            "description": "Free to download. Offers in-app purchases: Ringolo Premium, an optional auto-renewing subscription."
-          },
           "publisher": { "@id": "https://lkmcelik.github.io/calorify/#publisher" }
         },
         {
@@ -122,10 +113,10 @@
             },
             {
               "@type": "Question",
-              "name": "Is Ringolo free?",
+              "name": "What does Ringolo Premium include?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ringolo is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Ringolo Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe."
+                "text": "AI photo scans, voice logging and AI insights. Ringolo Premium is an auto-renewing monthly or yearly subscription, and the app shows the price in your currency before you subscribe. Eligible Apple IDs may get an introductory trial; the terms are shown before you subscribe. New accounts can try AI photo scans in their first days."
               }
             },
             {
@@ -138,10 +129,26 @@
             },
             {
               "@type": "Question",
+              "name": "Can I track my weight?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Log your weight in kg or lb and follow it on a chart in Reports with your goal line, the change since you started and how far along you are. A weekly weigh-in reminder helps you keep it up, and with your permission Ringolo reads your weights from Apple Health and saves the ones you log there."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can Ringolo remind me to log my meals?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Choose your meal times during setup, or later in Profile, and Ringolo reminds you to log breakfast, lunch and dinner. If you have no food nearby during setup, pick “I’ll log my next meal” and you’ll get one reminder at that meal that opens the camera. Water and weekly weigh-in reminders are there too."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Does Ringolo work with Apple Health?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional."
+                "text": "Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, reads your weights and saves the ones you log, and reads your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional."
               }
             },
             {
@@ -171,10 +178,10 @@
 
     <header class="site-nav">
         <div class="nav-inner">
-            <a class="lockup" href="#top" aria-label="Ringolo"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-nav" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-nav)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><span class="wordmark">R<span class="wm-i">i</span>ngolo</span></a>
+            <a class="lockup" href="#top"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-nav" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-nav)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><picture class="wordmark"><source srcset="img/wordmark-dark.svg" media="(prefers-color-scheme: dark)"><img src="img/wordmark-light.svg" alt="Ringolo" width="95" height="29"></picture></a>
             <nav class="nav-links" aria-label="Sections">
                 <a href="#log">Features</a>
-                <a href="#premium">Free and Premium</a>
+                <a href="#premium">Premium</a>
                 <a href="#faq">FAQ</a>
             </nav>
             <a class="nav-get" href="https://apps.apple.com/app/id6749366793" rel="noopener">Download<span class="visually-hidden"> Ringolo on the App Store</span></a>
@@ -191,7 +198,7 @@
                     <a class="store-badge" href="https://apps.apple.com/app/id6749366793" rel="noopener">
                         <img src="img/app-store-badge.svg" width="162" height="54" alt="Download on the App Store">
                     </a>
-                    <p class="hero-note">Free to download. Premium adds unlimited photo scans, voice logging and AI&nbsp;insights.</p>
+                    <p class="hero-note">AI photo scans, voice logging and AI insights are part of Ringolo&nbsp;Premium.</p>
                 </div>
                 <p class="hero-former">Ringolo was called Calorify until December 2026.</p>
             </div>
@@ -227,7 +234,7 @@
 
             <article class="feature" id="photo" aria-labelledby="photo-title">
                 <div class="feature-copy">
-                    <h3 id="photo-title" class="feature-label">AI photo scan</h3>
+                    <h3 id="photo-title" class="feature-label">AI photo scan <span class="pill">Premium</span></h3>
                     <p class="tagline display">Point. Snap. Know.</p>
                     <p>Take a photo or choose one from your library. Ringolo finds each item on the plate and estimates its portion, calories, protein, carbs and fat.</p>
                     <ul class="dots">
@@ -235,7 +242,7 @@
                         <li>Before you add the meal, the ring shows what's left after it.</li>
                         <li>Add it to breakfast, lunch, dinner or a snack, today or on an earlier day.</li>
                     </ul>
-                    <p class="plan"><span class="plan-key">AI estimates. You have the final say.</span> Free plan: 3-day trial of photo scans. Premium: unlimited.</p>
+                    <p class="plan"><span class="plan-key">AI estimates. You have the final say.</span> Part of Ringolo Premium. New accounts can try AI photo scans in their first days.</p>
                 </div>
                 <div class="feature-media">
                     <div class="phone">
@@ -278,7 +285,6 @@
                     <p class="tagline display">Search it, or add it yourself.</p>
                     <p>Search foods with your favorites and recent foods one tap away, then choose the portion and the meal.</p>
                     <p id="manual">Not there? Enter the name, portion and calories yourself. Protein, carbs and fat are optional.</p>
-                    <p class="plan">Free on every plan.</p>
                 </div>
                 <div class="feature-media">
                     <div class="shot-card shot-card--main">
@@ -338,6 +344,35 @@
             </div>
         </section>
 
+        <section class="group" id="progress" aria-labelledby="progress-title">
+            <div class="group-head">
+                <p class="eyebrow">Progress</p>
+                <h2 id="progress-title" class="display">Keep your goal in sight</h2>
+                <p>Log your weight in seconds, and let reminders bring you back at the right time.</p>
+            </div>
+
+            <div class="pair pair--text">
+                <article class="mini" id="weight" aria-labelledby="weight-title">
+                    <h3 id="weight-title" class="feature-label">Weight progress</h3>
+                    <p class="tagline display">Watch the line move.</p>
+                    <p>Log your weight in kg or lb. A chart in Reports shows every entry against your goal line, with the change since you started and how far along you are.</p>
+                    <ul class="dots">
+                        <li>A weekly weigh-in reminder on the day and at the time you choose.</li>
+                        <li>With your permission, Ringolo reads your weights from Apple Health and saves the ones you log there.</li>
+                    </ul>
+                </article>
+                <article class="mini" id="reminders" aria-labelledby="reminders-title">
+                    <h3 id="reminders-title" class="feature-label">Reminders</h3>
+                    <p class="tagline display">A nudge at mealtime.</p>
+                    <p>Choose your meal times during setup, and Ringolo reminds you to log breakfast, lunch and dinner. Change them any time in Profile.</p>
+                    <ul class="dots">
+                        <li>No food nearby during setup? Pick &ldquo;I&rsquo;ll log my next meal&rdquo; and get one reminder at that meal that opens the camera.</li>
+                        <li>Water reminders too, and a weekly weigh-in reminder when you have a weight goal.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
         <section class="group" id="reports" aria-labelledby="reports-title">
             <div class="group-head">
                 <p class="eyebrow">Reports</p>
@@ -352,9 +387,8 @@
                     <dl class="tabs">
                         <div><dt>Overview</dt><dd>Average calories per logged day, days on target (within 10%), your current and best streak, and calories against your goal.</dd></div>
                         <div><dt>Nutrition</dt><dd>Where your calories come from, daily averages against your targets, your meals, your most-logged foods, and fiber, sugar and sodium.</dd></div>
-                        <div><dt>Progress</dt><dd>Every day as a ring, water per day, and steps and active energy from Apple Health.</dd></div>
+                        <div><dt>Progress</dt><dd>Every day as a ring, your weight against your goal, water per day, and steps and active energy from Apple Health.</dd></div>
                     </dl>
-                    <p class="plan">Overview, Nutrition, Progress and water stay free.</p>
                 </div>
                 <div class="feature-media">
                     <div class="phone">
@@ -423,7 +457,7 @@
                         <div><dt>Devices</dt><dd>iPhone and iPad with iOS or iPadOS 17.6 or later</dd></div>
                         <div><dt>Appearance</dt><dd>Light, dark, or match your system</dd></div>
                         <div><dt>Units</dt><dd>Metric or US: ml or fl oz, cm or feet and inches</dd></div>
-                        <div><dt>Apple Health</dt><dd>Optional: fill in your profile and see steps and active energy</dd></div>
+                        <div><dt>Apple Health</dt><dd>Optional: fill in your profile, sync your weight, and see steps and active energy</dd></div>
                         <div><dt>Languages</dt><dd>15, chosen in Profile:
                             <ul class="langs">
                                 <li lang="en">English</li><li lang="tr">Türkçe</li><li lang="de">Deutsch</li><li lang="es">Español</li><li lang="fr">Français</li><li lang="it">Italiano</li><li lang="pt">Português</li><li lang="nl">Nederlands</li><li lang="pl">Polski</li><li lang="ru">Русский</li><li lang="ja">日本語</li><li lang="ko">한국어</li><li lang="zh-Hans">简体中文</li><li lang="ar" dir="rtl">العربية</li><li lang="hi">हिन्दी</li>
@@ -446,27 +480,19 @@
 
         <section class="group" id="premium" aria-labelledby="premium-title">
             <div class="group-head">
-                <p class="eyebrow">Free and Premium</p>
-                <h2 id="premium-title" class="display">What you get</h2>
-                <p>The core of Ringolo is free. Ringolo Premium unlocks the AI features without limits.</p>
+                <p class="eyebrow">Premium</p>
+                <h2 id="premium-title" class="display">What Premium adds</h2>
+                <p>Ringolo Premium adds the AI features.</p>
             </div>
             <div class="compare-wrap">
-                <table class="compare">
-                    <caption class="visually-hidden">Features on the free plan and with Ringolo Premium</caption>
-                    <thead>
-                        <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Premium</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><th scope="row">Journal, search and manual entry</th><td><span class="mark-yes" role="img" aria-label="Included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
-                        <tr><th scope="row">Reports and water</th><td><span class="mark-yes" role="img" aria-label="Included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
-                        <tr><th scope="row">Photo scans</th><td>3-day trial</td><td class="strong">Unlimited</td></tr>
-                        <tr><th scope="row">Voice logging</th><td><span class="mark-no" role="img" aria-label="Not included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
-                        <tr><th scope="row">AI insights</th><td><span class="mark-no" role="img" aria-label="Not included"></span></td><td><span class="mark-yes" role="img" aria-label="Included"></span></td></tr>
-                    </tbody>
-                </table>
+                <ul class="premium-list">
+                    <li><strong>AI photo scans</strong> Snap a meal for calories, protein, carbs and fat on every item.</li>
+                    <li><strong>Voice logging</strong> Say what you ate and check the foods before you add them.</li>
+                    <li><strong>AI insights</strong> The one or two changes that matter most in the range you pick, with one-tap reminders.</li>
+                </ul>
                 <div class="compare-notes">
                     <p>Ringolo Premium is an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe, and you can cancel anytime in your Apple Account settings.</p>
-                    <p>The 3-day photo scan trial starts when you finish setup on a new account, includes a daily number of scans, and is available once per person and device.</p>
+                    <p>Eligible Apple IDs may get an introductory trial; the terms are shown before you subscribe. New accounts can try AI photo scans in their first days.</p>
                 </div>
             </div>
         </section>
@@ -482,16 +508,24 @@
                     <p>Take a photo and Ringolo's AI estimates the portion, calories, protein, carbs and fat of each item on the plate. You can also say what you ate, search for a food or enter it yourself. You can check and edit every item before it's added to your day.</p>
                 </details>
                 <details>
-                    <summary>Is Ringolo free?</summary>
-                    <p>Ringolo is free to download. The journal, food search, manual entry, reports and water tracking are free, and the free plan includes a 3-day trial of photo scans. Unlimited photo scans, voice logging and AI insights come with Ringolo Premium, an auto-renewing monthly or yearly subscription. The app shows the price in your currency before you subscribe.</p>
+                    <summary>What does Ringolo Premium include?</summary>
+                    <p>AI photo scans, voice logging and AI insights. Ringolo Premium is an auto-renewing monthly or yearly subscription, and the app shows the price in your currency before you subscribe. Eligible Apple IDs may get an introductory trial; the terms are shown before you subscribe. New accounts can try AI photo scans in their first days.</p>
                 </details>
                 <details>
                     <summary>How accurate are the photo estimates?</summary>
                     <p>They're AI estimates, so treat them as a starting point. Tap any item to fix its name or portion, or remove it, before you add the meal. Ringolo is not a medical device and doesn't give medical advice.</p>
                 </details>
                 <details>
+                    <summary>Can I track my weight?</summary>
+                    <p>Yes. Log your weight in kg or lb and follow it on a chart in Reports with your goal line, the change since you started and how far along you are. A weekly weigh-in reminder helps you keep it up, and with your permission Ringolo reads your weights from Apple Health and saves the ones you log there.</p>
+                </details>
+                <details>
+                    <summary>Can Ringolo remind me to log my meals?</summary>
+                    <p>Yes. Choose your meal times during setup, or later in Profile, and Ringolo reminds you to log breakfast, lunch and dinner. If you have no food nearby during setup, pick &ldquo;I&rsquo;ll log my next meal&rdquo; and you&rsquo;ll get one reminder at that meal that opens the camera. Water and weekly weigh-in reminders are there too.</p>
+                </details>
+                <details>
                     <summary>Does Ringolo work with Apple Health?</summary>
-                    <p>Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, and your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional.</p>
+                    <p>Yes, if you want it to. With your permission, Ringolo reads your height, weight, date of birth and sex from Apple Health to fill in your profile, reads your weights and saves the ones you log, and reads your steps and active energy to show your activity in the journal and reports. Connecting Apple Health is optional.</p>
                 </details>
                 <details>
                     <summary>Which devices and languages does Ringolo support?</summary>
@@ -514,7 +548,7 @@
             </svg>
             <div class="finale-copy">
                 <h2 id="download-title" class="display">Start with your next meal</h2>
-                <p>Ringolo is free to download for iPhone and iPad.</p>
+                <p>Ringolo is an AI calorie counter for iPhone and iPad.</p>
                 <a class="store-badge" href="https://apps.apple.com/app/id6749366793" rel="noopener">
                     <img src="img/app-store-badge.svg" width="162" height="54" alt="Download on the App Store">
                 </a>
@@ -524,7 +558,7 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <div class="lockup lockup--stacked" role="img" aria-label="Ringolo"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-foot" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-foot)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><span class="wordmark">R<span class="wm-i">i</span>ngolo</span></div>
+            <div class="lockup lockup--stacked"><svg class="mark" viewBox="146 146 732 732" aria-hidden="true" focusable="false"><defs><linearGradient id="g-mark-foot" gradientUnits="userSpaceOnUse" x1="868" y1="156" x2="156" y2="868" gradientTransform="rotate(90 512 512)"><stop offset="0" stop-color="#00CCB3"/><stop offset="1" stop-color="#66E666"/></linearGradient></defs><circle class="mark-track" cx="512" cy="512" r="300"/><circle class="mark-arc" cx="512" cy="512" r="300" stroke="url(#g-mark-foot)" stroke-dasharray="1177 708" stroke-dashoffset="-66" transform="rotate(-90 512 512)"/><circle class="mark-seg" cx="512" cy="512" r="300" stroke-dasharray="140.3 1744.7" stroke-dashoffset="-1416.9" transform="rotate(-90 512 512)"/></svg><picture class="wordmark"><source srcset="img/wordmark-dark.svg" media="(prefers-color-scheme: dark)"><img src="img/wordmark-light.svg" alt="Ringolo" width="95" height="29"></picture></div>
             <nav class="footer-links" aria-label="Site">
                 <a href="count-calories-from-a-photo/">How to count calories from a photo</a>
                 <a href="ringolo-vs-typical-calorie-counters/">Ringolo vs typical calorie counters</a>
